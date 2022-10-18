@@ -1,0 +1,23 @@
+plugins {
+    id 'groovy'
+}
+
+group 'uk.co.sjlt'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree('/home/steve/.sdkman/candidates/groovy/current/lib') {
+        include '*.jar'
+        include '*/*.jar'
+    }
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
